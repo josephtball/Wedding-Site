@@ -1,0 +1,19 @@
+{
+  "name": "wedding-site",
+  "version": "1.0.0",
+  "description": "Dave and Caitlin wedding website",
+  "main": "./server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephtball/Wedding-Site.git"
+  },
+  "author": "Joseph T. Ball",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephtball/Wedding-Site/issues"
+  },
+  "homepage": "https://github.com/josephtball/Wedding-Site#readme"
+}
