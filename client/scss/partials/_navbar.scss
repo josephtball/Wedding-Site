@@ -1,0 +1,42 @@
+/* hamburger */
+.menu-toggle {
+	padding: 1em;
+	position: fixed;
+	top: 0.45em;
+	left: 0.3em;
+	z-index: 999;
+
+	// @include mq {
+	// 	display: none;
+	// }
+
+	.hamburger-top,
+	.hamburger-middle,
+	.hamburger-bottom {
+		content: '';
+		display: block;
+		background-color: $contentColor;
+		height: 3px;
+		width: 1.75em;
+		border-radius: 3px;
+		transition: all ease-in-out 500ms;
+	}
+	.hamburger-top {
+		transform: translateY(-3px);
+	}
+	.hamburger-bottom {
+		transform: translateY(3px);
+	}
+}
+
+.open {
+	.hamburger-top {
+		transform: translateY(3px) rotate(45deg);
+	}
+	.hamburger-middle {
+		opacity: 0;
+	}
+	.hamburger-bottom {
+		transform: translateY(-3px) rotate(-45deg);
+	}
+}
