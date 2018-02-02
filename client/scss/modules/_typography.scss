@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One|PT+Serif:400,400italic');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Homemade+Apple|PT+Serif:400,700');
 
+$styledFont: 'Homemade Apple', cursive;
 $titleFont: 'Fjalla One', sans-serif;
 $contentFont: 'PT Serif', serif;
+
+@mixin header($fs, $color: $titleColor, $lh: 1) {
+	font-size: $fs;
+	color: $color;
+	text-transform: uppercase;
+	line-height: $lh;
+    font-family: $titleFont;
+    margin: 0;
+    text-align: center;
+}
