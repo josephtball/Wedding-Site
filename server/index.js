@@ -21,7 +21,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use('/static', express.static(path.join(__dirname, '../public')));
 
 // routes
-var htmlRoutes = require('./controllers/htmlRoutes.js');
+var htmlRoutes = require('./controllers/htmlRoutes');
 app.use('/', htmlRoutes);
 
 // start server
