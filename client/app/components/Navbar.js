@@ -12,11 +12,19 @@ export default class Navbar extends Component {
     render() {
         return (
             <nav>
-                <div onClick={this.toggleClass} className={`menu-toggle${this.state.openCloseMenu ? ' open': ''}`}>
+                <div className="hamburger-container">
+                    <input type="checkbox" id="toggle" />
+                    <label for="toggle" className="toggle-animation">
+                        <div className="hamburger-top"></div>
+                        <div className="hamburger-middle"></div>
+                        <div className="hamburger-bottom"></div>
+                    </label>
+                </div>
+                {/* <div onClick={this.toggleClass} className={`menu-toggle${this.state.openCloseMenu ? ' open': ''}`}>
                     <div className="hamburger-top"></div>
                     <div className="hamburger-middle"></div>
                     <div className="hamburger-bottom"></div>
-                </div>
+                </div> */}
                 <div className="site-nav">
                     <ul>
                         <li><a className="nav-link scroll" href="#home">home</a></li>

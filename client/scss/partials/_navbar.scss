@@ -9,13 +9,31 @@
 	// @include mq {
 	// 	display: none;
 	// }
+	}
+.hamburger-container {
+	display: inline-block;
+	position: relative;
+	margin: auto;
+	height: 3em;
+	width: 3em;
+	background-color: rgb(30,30,30);
+	border-radius: 100px;
+	float: left;
+
+	#toggle {
+		display: none;
+
+		&:checked {
+			
+		}
+	}
 
 	.hamburger-top,
 	.hamburger-middle,
 	.hamburger-bottom {
 		content: '';
 		display: block;
-		background-color: $contentColor;
+		background-color: $gray;
 		height: 3px;
 		width: 1.75em;
 		border-radius: 3px;
