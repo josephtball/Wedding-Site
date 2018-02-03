@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import Navbar from './components/Navbar';
+import Main from './components/Main';
+import Footer from './components/Footer';
 
 class App extends Component {
 	constructor(props) {
@@ -16,6 +18,8 @@ class App extends Component {
 		return (
 			<div>
 				<Navbar />
+				<Main />
+				<Footer />
 			</div>
 		);
 	}
