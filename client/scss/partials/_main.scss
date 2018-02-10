@@ -1,5 +1,13 @@
 main {
-    margin: calc(52px + 1.5em) auto 1.5em;
+    margin: 3.75em auto 1.5em;
     width: 90%;
     background-color: $offWhite;
+}
+
+.hero {
+    background-image: url(../images/hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 14.063em;
 }
