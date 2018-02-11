@@ -9,8 +9,10 @@ export default class Main extends Component {
         return (
             <main>
                 <section className="hero">
-                    <h1>Caitlin & David</h1>
-                    <h4>8/17/18</h4>
+                    <div className="hero-title">
+                        <h1>Caitlin & David</h1>
+                        <h3>8/17/18</h3>
+                    </div>
                 </section>
                 <section className="content">
                     <h2>Welcom to Our Wedding</h2>
