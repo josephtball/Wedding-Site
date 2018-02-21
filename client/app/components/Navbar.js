@@ -16,9 +16,15 @@ export default class Navbar extends Component {
     handleNavClick() {
         console.log('hamburger clicked');
         if (this.state.navStatus === 'closed') {
-            this.setState({ navStatus: 'open' });
+            this.setState({
+                imageSrc: 'static/assets/images/cancel.png',
+                navStatus: 'open'
+            });
         } else {
-            this.setState({ navStatus: 'closed' });
+            this.setState({
+                imageSrc: 'static/assets/images/hamburger.png',
+                navStatus: 'closed'
+            });
         }
         
     }
