@@ -5,15 +5,35 @@ export default class Navbar extends Component {
         super(props);
 
         this.state = {
-            page: 'Caitlin & David\'s Wedding'
+            page: 'Caitlin & David\'s Wedding',
+            imageSrc: 'static/assets/images/hamburger.png',
+            navStatus: 'closed'
         };
+
+        this.handleNavClick = this.handleNavClick.bind(this);
+    }
+
+    handleNavClick() {
+        console.log('hamburger clicked');
+        if (this.state.navStatus === 'closed') {
+            this.setState({
+                imageSrc: 'static/assets/images/cancel.png',
+                navStatus: 'open'
+            });
+        } else {
+            this.setState({
+                imageSrc: 'static/assets/images/hamburger.png',
+                navStatus: 'closed'
+            });
+        }
+        
     }
 
     render() {
         return (
             <nav>
                 <h2 className="nav-header">{this.state.page}</h2>
-                <img className="hamburger" src="static/assets/images/hamburger.png" alt="navigation" />
+                <img onClick={this.handleNavClick} className={`hamburger ${this.state.navStatus}`} src={this.state.imageSrc} alt="navigation" />
             </nav>
         );
     }
