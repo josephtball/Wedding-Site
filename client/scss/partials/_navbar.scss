@@ -3,7 +3,7 @@ nav {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 999;
+	z-index: 997;
 	height: 3.25em;
 	width: 100%;
 }
@@ -12,8 +12,47 @@ nav {
 	@include header($fs: 1.5em, $lh: 2.18em)
 }
 
-.hamburger {
+.hamburger-closed {
 	position: absolute;
 	top: -14px;
 	right: -9px;
+}
+
+.hamburger-open {
+	position: absolute;
+	top: 14px;
+	right: 17px;
+	z-index: 999;
+}
+
+.site-nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	background-color: $contentColor;
+	clip-path: circle(0 at 100% 0);
+	transition: clip-path ease-out 750ms; 
+	z-index: 998;
+
+	ul {
+		float: right;
+		list-style: none;
+		margin: 2em 0 6em;
+	}
+
+	li {
+		text-align: center;
+		padding: 1em 3.5em; 
+	}
+
+	a {
+		color: $white;
+		text-decoration: none;
+		@include header($fs: 1.2em, $color: $white, $lh: 1);
+	}
+}
+
+.site-nav-open {
+	clip-path: circle(80% at 100% 20%);
 }
