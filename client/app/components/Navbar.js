@@ -33,7 +33,17 @@ export default class Navbar extends Component {
         return (
             <nav>
                 <h2 className="nav-header">{this.state.page}</h2>
-                <img onClick={this.handleNavClick} className={`hamburger ${this.state.navStatus}`} src={this.state.imageSrc} alt="navigation" />
+                <img onClick={this.handleNavClick} className={`hamburger-${this.state.navStatus}`} src={this.state.imageSrc} alt="navigation" />
+                <div className={`site-nav site-nav-${this.state.navStatus}`}>
+                    <ul>
+                        <li><a className="nav-link" href="#home">home</a></li>
+                        <li><a className="nav-link" href="#schedule">schedule</a></li>
+                        <li><a className="nav-link" href="#accommodations">accommodations</a></li>
+                        <li><a className="nav-link" href="#the-couple">the couple</a></li>
+                        <li><a className="nav-link" href="#wedding-party">wedding party</a></li>
+                        <li><a className="nav-link" href="#gallery">gallery</a></li>
+                    </ul>
+                </div>
             </nav>
         );
     }
