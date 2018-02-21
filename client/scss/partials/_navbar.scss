@@ -9,7 +9,7 @@ nav {
 }
 
 .nav-header {
-	@include header($fs: 1.5rem, $lh: 2.18em)
+	@include header($fs: 1.5em, $lh: 2.18em)
 }
 
 .hamburger {
