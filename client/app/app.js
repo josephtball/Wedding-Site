@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import Main from './components/Main';
 import Footer from './components/Footer';
+import Home from './components/Home';
+import Schedule from './components/Schedule';
+// import Accommodations from './components/Accommodations';
+// import TheCouple from './components/TheCouple';
+// import WeddingParty from './components/WeddingParty';
+// import Gallery from './components/Gallery';
 
 class App extends Component {
 	constructor(props) {
@@ -16,11 +22,20 @@ class App extends Component {
 
 	render() {
 		return (
-			<div>
-				<Navbar />
-				<Main />
-				<Footer />
-			</div>
+			<BrowserRouter>
+				<div>
+					<Navbar />
+					<Switch>
+						<Route path="/" exact component={Home} />
+						<Route path="/schedule" component={Schedule} />
+						{/* <Route path="/accommodations" component={Accommodations} />
+						<Route path="/the-couple" component={TheCouple} />
+						<Route path="/wedding-party" component={WeddingParty} />
+						<Route path="/gallery" component={Gallery} /> */}
+					</Switch>
+					<Footer />
+				</div>
+			</BrowserRouter>
 		);
 	}
 }
