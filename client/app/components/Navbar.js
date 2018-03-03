@@ -37,12 +37,12 @@ export default class Navbar extends Component {
                 <img onClick={this.handleNavClick} className={`hamburger-${this.state.navStatus}`} src={this.state.imageSrc} alt="navigation" />
                 <div className={`site-nav site-nav-${this.state.navStatus}`}>
                     <ul>
-                        <li><NavLink className="nav-link" to="/" exact>home</NavLink></li>
-                        <li><NavLink className="nav-link" to="/schedule">schedule</NavLink></li>
-                        <li><NavLink className="nav-link" to="/accommodations">accommodations</NavLink></li>
-                        <li><NavLink className="nav-link" to="/the-couple">the couple</NavLink></li>
-                        <li><NavLink className="nav-link" to="/wedding-party">wedding party</NavLink></li>
-                        <li><NavLink className="nav-link" to="/gallery">gallery</NavLink></li>
+                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/" exact>home</NavLink></li>
+                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/schedule">schedule</NavLink></li>
+                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/accommodations">accommodations</NavLink></li>
+                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/the-couple">the couple</NavLink></li>
+                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/wedding-party">wedding party</NavLink></li>
+                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/gallery">gallery</NavLink></li>
                     </ul>
                 </div>
             </nav>
