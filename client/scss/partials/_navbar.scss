@@ -9,7 +9,21 @@ nav {
 }
 
 .nav-header {
-	@include header($fs: 1.5em, $lh: 2.18em)
+	@include header($fs: 1.5em, $lh: 2.18em);
+}
+
+.home-nav-header {
+	@include header($fs: 1.0em, $lh: 3.25em);
+
+	@include mq($width: 22.6875em) {
+		font-size: 1.2em;
+		line-height: 2.75em;
+	}
+
+	@include mq($width: 25.625em) {
+		font-size: 1.5em;
+		line-height: 2.18em;
+	}
 }
 
 .hamburger-closed {
@@ -30,30 +44,59 @@ nav {
 	position: fixed;
 	top: 0;
 	right: 0;
-	width: 100%;
+	padding-bottom: 1.5em;
+	visibility: hidden;
+	height: 0;
+	opacity: 0;
+	transition: all ease-out 500ms;
 	background-color: $contentColor;
-	clip-path: circle(0 at 100% 0);
-	transition: clip-path ease-out 750ms; 
 	z-index: 998;
 
-	ul {
-		float: right;
-		list-style: none;
-		margin: 2em 0 6em;
+	@supports (clip-path: circle(0 at 100% 0)) {
+		height: 29.7em;
+		opacity: 1;
+		clip-path: circle(0 at 100% 0);
+		transition: all ease-out 750ms;
+		width: 100%;
+		padding-bottom: 0;
 	}
 
-	li {
-		text-align: center;
-		padding: 1em 3.5em; 
+	.links {
+		float: right;
+		padding-top: 1.5em;
+
+		@include clearfix;
 	}
 
 	a {
+		display: block;
 		color: $white;
 		text-decoration: none;
 		@include header($fs: 1.2em, $color: $white, $lh: 1);
+		padding: 1em 3.8em;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	.nav-line {
+			content: '';
+			display: block;
+			margin: auto;
+			width: 10%;
+			height: 1px;
+			background-color: $white;
 	}
 }
 
 .site-nav-open {
-	clip-path: circle(80% at 100% 20%);
+	visibility: visible;
+	height: 24.828125em;
+	opacity: 1;
+	
+	@supports (clip-path: circle(18.5em at 100% 30%)) {
+		height: 29.7em;
+		clip-path: circle(18.5em at 100% 30%);
+	}
 }

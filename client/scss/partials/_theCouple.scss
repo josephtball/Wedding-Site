@@ -1,0 +1,33 @@
+.theCouple {
+    background-color: $offWhite;
+}
+
+.theCouple-hero {
+    height: 11em;
+    background-image: url(../images/theCouple-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.theCouple-content {
+    padding: 2em 1em;
+}
+
+.personals {
+    @include mq($width: 25.625em) {
+        display: flex;
+        
+        div {
+            flex: 1;
+
+            &:first-of-type {
+                margin-right: 1em;
+            }
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+	}
+}
