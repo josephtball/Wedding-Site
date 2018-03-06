@@ -9,6 +9,10 @@ nav {
 }
 
 .nav-header {
+	@include header($fs: 1.5em, $lh: 2.18em);
+}
+
+.home-nav-header {
 	@include header($fs: 1.0em, $lh: 3.25em);
 
 	@include mq($width: 22.6875em) {

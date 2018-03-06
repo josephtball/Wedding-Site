@@ -1,0 +1,35 @@
+.schedule {
+    background-color: $offWhite;
+}
+
+.event-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: flex;
+        padding: 1em 1.5em;
+        border-bottom: 1px solid #E0C09F;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+
+        .event-details {
+            flex: 1 0 auto;
+        }
+        .event-arrow {
+            flex-shrink: 0;
+        }
+    }
+
+    h3, h4 {
+        margin: 0;
+        text-align: left;
+    }
+
+    h4 {
+        font-size: 0.8em;
+    }
+}

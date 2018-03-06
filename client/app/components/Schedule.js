@@ -7,13 +7,47 @@ export default class Schedule extends Component {
 
     render() {
         return (
-            <main>
-                <section className="content">
-                    <h2>Schedule</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu tristique metus, at maximus nisl. Aliquam in neque rhoncus, suscipit sem eget, sodales neque. Suspendisse sit amet ipsum leo. Phasellus a nisl viverra, molestie neque et, aliquam mauris. Nullam vulputate augue a massa accumsan blandit.</p>
-                    <button className="rsvp" disabled>RSVP</button>
-                </section>
-            </main>
+            <main className="schedule">
+            <section className="content schedule-content">
+                <ul className="event-list">
+                    <li className="event">
+                        <div className="event-details">
+                            <h3 className="event-title">Event Name</h3>
+                            <h4 className="event-date">8/14/2018 5:00PM</h4>
+                        </div>
+                        <img className="event-arrow" src="static/assets/images/arrow.png" alt="arrow" />
+                    </li>
+                    <li className="event">
+                        <div className="event-details">
+                            <h3 className="event-title">Event Name</h3>
+                            <h4 className="event-date">8/14/2018 5:00PM</h4>
+                        </div>
+                        <img className="event-arrow" src="static/assets/images/arrow.png" alt="arrow" />
+                    </li>
+                    <li className="event">
+                        <div className="event-details">
+                            <h3 className="event-title">Event Name</h3>
+                            <h4 className="event-date">8/14/2018 5:00PM</h4>
+                        </div>
+                        <img className="event-arrow" src="static/assets/images/arrow.png" alt="arrow" />
+                    </li>
+                    <li className="event">
+                        <div className="event-details">
+                            <h3 className="event-title">Event Name</h3>
+                            <h4 className="event-date">8/14/2018 5:00PM</h4>
+                        </div>
+                        <img className="event-arrow" src="static/assets/images/arrow.png" alt="arrow" />
+                    </li>
+                    <li className="event">
+                        <div className="event-details">
+                            <h3 className="event-title">Event Name</h3>
+                            <h4 className="event-date">8/14/2018 5:00PM</h4>
+                        </div>
+                        <img className="event-arrow" src="static/assets/images/arrow.png" alt="arrow" />
+                    </li>
+                </ul>
+            </section>
+        </main>
         )
     }
 }

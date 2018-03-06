@@ -11,6 +11,38 @@ body {
     padding: 4.5em 0 1.25em; 
 }
 
+main {
+    margin: auto;
+    width: 92%;
+}
+
+.content {
+    font-family: $contentFont;
+    text-align: center;
+    color: $contentColor;
+
+    h2 {
+        @include header($fs: 1.6em)
+    }
+}
+
+button {
+    padding: 0.5em 3em;
+    border: none;
+    border-radius: 2px;
+    background-color: $accentColor;
+    color: $offWhite;
+    font-family: $contentFont;
+
+    &:hover {
+        opacity: 0.70;
+    }
+
+    &:active {
+        box-shadow: 0px 0px 5px 2px $accentColor;
+    }
+}
+
 /* sticky footer */
 html, body, #app, #all-content{
     height: 100%;
