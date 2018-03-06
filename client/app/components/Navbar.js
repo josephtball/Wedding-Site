@@ -14,8 +14,7 @@ export default class Navbar extends Component {
         this.handleNavClick = this.handleNavClick.bind(this);
     }
 
-    handleNavClick() {
-        console.log('hamburger clicked');
+    handleNavClick(event) {
         if (this.state.navStatus === 'closed') {
             this.setState({
                 imageSrc: 'static/assets/images/cancel.png',
@@ -36,14 +35,14 @@ export default class Navbar extends Component {
                 <h2 className="nav-header">{this.state.page}</h2>
                 <img onClick={this.handleNavClick} className={`hamburger-${this.state.navStatus}`} src={this.state.imageSrc} alt="navigation" />
                 <div className={`site-nav site-nav-${this.state.navStatus}`}>
-                    <ul>
-                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/" exact>home</NavLink></li>
-                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/schedule">schedule</NavLink></li>
-                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/accommodations">accommodations</NavLink></li>
-                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/the-couple">the couple</NavLink></li>
-                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/wedding-party">wedding party</NavLink></li>
-                        <li><NavLink onClick={this.handleNavClick} className="nav-link" to="/gallery">gallery</NavLink></li>
-                    </ul>
+                    <div className="links">
+                        <NavLink onClick={this.handleNavClick} className="nav-link" to="/" exact>home</NavLink><span className="nav-line"></span>
+                        <NavLink onClick={this.handleNavClick} className="nav-link" to="/schedule">schedule</NavLink><span className="nav-line"></span>
+                        <NavLink onClick={this.handleNavClick} className="nav-link" to="/accommodations">accommodations</NavLink><span className="nav-line"></span>
+                        <NavLink onClick={this.handleNavClick} className="nav-link" to="/the-couple">the couple</NavLink><span className="nav-line"></span>
+                        <NavLink onClick={this.handleNavClick} className="nav-link" to="/wedding-party">wedding party</NavLink><span className="nav-line"></span>
+                        <NavLink onClick={this.handleNavClick} className="nav-link" to="/gallery">gallery</NavLink>
+                    </div>
                 </div>
             </nav>
         );
