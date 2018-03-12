@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import EventList from './EventList';
+import EventDetails from './EventDetails';
 
 export default class Schedule extends Component {
     constructor(props) {
@@ -9,43 +12,10 @@ export default class Schedule extends Component {
         return (
             <main className="schedule">
             <section className="content schedule-content">
-                <ul className="event-list">
-                    <li className="event">
-                        <div className="event-details">
-                            <h3 className="event-title">Event Name</h3>
-                            <h4 className="event-date">8/14/2018 5:00PM</h4>
-                        </div>
-                        <img className="event-arrow" src="static/assets/images/arrow.png" alt="arrow" />
-                    </li>
-                    <li className="event">
-                        <div className="event-details">
-                            <h3 className="event-title">Event Name</h3>
-                            <h4 className="event-date">8/14/2018 5:00PM</h4>
-                        </div>
-                        <img className="event-arrow" src="static/assets/images/arrow.png" alt="arrow" />
-                    </li>
-                    <li className="event">
-                        <div className="event-details">
-                            <h3 className="event-title">Event Name</h3>
-                            <h4 className="event-date">8/14/2018 5:00PM</h4>
-                        </div>
-                        <img className="event-arrow" src="static/assets/images/arrow.png" alt="arrow" />
-                    </li>
-                    <li className="event">
-                        <div className="event-details">
-                            <h3 className="event-title">Event Name</h3>
-                            <h4 className="event-date">8/14/2018 5:00PM</h4>
-                        </div>
-                        <img className="event-arrow" src="static/assets/images/arrow.png" alt="arrow" />
-                    </li>
-                    <li className="event">
-                        <div className="event-details">
-                            <h3 className="event-title">Event Name</h3>
-                            <h4 className="event-date">8/14/2018 5:00PM</h4>
-                        </div>
-                        <img className="event-arrow" src="static/assets/images/arrow.png" alt="arrow" />
-                    </li>
-                </ul>
+                <Switch>
+                    <Route path={`/schedule`} exact component={EventList} />
+                    <Route path={`/schedule/:eventId`} component={EventDetails} />
+                </Switch>
             </section>
         </main>
         )
