@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const EventList = props => {
     return (
         <div>
             <section>
-                <img src="" alt="" />
+                <Link to="/schedule">
+                    <img src="../static/assets/images/event-cancel.png" alt="return to event list" />
+                </Link>
                 <div>
                     <h2>Event Name</h2>
                     <h3>8/14/2018 5:00PM</h3>
@@ -12,7 +15,7 @@ const EventList = props => {
             </section>
             <section>
                 <div>
-                    <img src="" alt="" />
+                    <img src="../static/assets/images/event.jpg" alt="event image" />
                     <div>
                         <h2>Location Name</h2>
                         <button>View on Map</button>

@@ -8,13 +8,18 @@
     list-style: none;
 
     li {
-        display: flex;
         padding: 1em 1.5em;
         border-bottom: 1px solid #E0C09F;
 
         &:last-of-type {
             border-bottom: none;
         }
+    }
+
+    a {
+        display: flex;
+        text-decoration: none;
+        color: $contentColor;
 
         .event-details {
             flex: 1 0 auto;
