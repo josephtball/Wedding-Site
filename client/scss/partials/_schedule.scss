@@ -21,10 +21,10 @@
         text-decoration: none;
         color: $contentColor;
 
-        .event-details {
+        .event-list-heading {
             flex: 1 0 auto;
         }
-        .event-arrow {
+        .event-list-arrow {
             flex-shrink: 0;
         }
     }
@@ -36,5 +36,52 @@
 
     h4 {
         font-size: 0.8em;
+    }
+}
+
+.event-details {
+    padding: 1em;
+
+    h4 {
+        margin: 0;
+    }
+
+    .event-details-header {
+        margin-bottom: 2em;
+        position: relative;
+
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        h2 {
+            color: $contentColor;
+            font-family: $contentFont;
+            text-transform: none;
+            margin-bottom: 0.3em;
+        }
+    }
+
+    .event-details-content {
+
+        h4 {
+            margin-bottom: 0.5em;
+        }
+        
+        .event-details-split {
+            display: flex;
+
+            .event-details-image {
+                flex: 1;
+                align-self: center;
+                max-width: 50%;
+            }
+
+            .event-details-location {
+                flex: 1;
+            }
+        }
     }
 }

@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom';
 
 const EventList = props => {
     return (
-        <div>
-            <section className="detail-header">
+        <div className="event-details">
+            <section className="event-details-header">
                 <Link to="/schedule">
                     <img src="../static/assets/images/event-cancel.png" alt="return to event list" />
                 </Link>
                 <div>
                     <h2>Event Name</h2>
-                    <h3>8/14/2018 5:00PM</h3>
+                    <h4>8/14/2018 5:00PM</h4>
                 </div>
             </section>
-            <section className="detail-content">
-                <div>
-                    <img src="../static/assets/images/event.jpg" alt="event image" />
-                    <div>
-                        <h2>Location Name</h2>
+            <section className="event-details-content">
+                <div className="event-details-split">
+                    <img className="event-details-image" src="../static/assets/images/event.jpg" alt="event image" />
+                    <div className="event-details-location">
+                        <h4>Location Name</h4>
                         <button>View on Map</button>
                     </div>
                 </div>
