@@ -4,9 +4,16 @@ const WeddingParty = props => {
     return (
         <main>
             <section className="content">
-                <h2>Wedding Party</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu tristique metus, at maximus nisl. Aliquam in neque rhoncus, suscipit sem eget, sodales neque. Suspendisse sit amet ipsum leo. Phasellus a nisl viverra, molestie neque et, aliquam mauris. Nullam vulputate augue a massa accumsan blandit.</p>
-                <button className="rsvp" disabled>RSVP</button>
+                <h2><span className="selected">Bridesmaids</span> / <span className="">Groomsmen</span></h2>
+                <div className="photo-cards">
+                    <div className="card">
+                        <img className="portrait" src="" alt="portrait" />
+                        <div className="label">
+                            <h3 className="first-name">FirstName</h3>
+                            <h3 className="last-name">LastName</h3>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
     )
