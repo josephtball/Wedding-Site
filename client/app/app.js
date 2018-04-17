@@ -4,12 +4,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './components/Home';
-import Schedule from './components/Schedule';
-import Accommodations from './components/Accommodations';
-import TheCouple from './components/TheCouple';
-import WeddingParty from './components/WeddingParty';
-import Gallery from './components/Gallery';
+import Home from './pages/Home';
+import Schedule from './pages/Schedule';
+import Accommodations from './pages/Accommodations';
+import TheCouple from './pages/TheCouple';
+import WeddingParty from './pages/WeddingParty';
+import Gallery from './pages/Gallery';
 
 const App = props => {
 	return (
