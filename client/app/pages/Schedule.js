@@ -9,22 +9,21 @@ export default class Schedule extends Component {
         super(props)
 
         this.state = {
-            eventList: []
+            events: []
         }
 
-        helpers.getEvents().then((response) => {
-            this.setState({ eventList: response.data });
+        helpers.getEvents().then((data) => {
+            this.setState({ events: data });
         });
     }
 
     render() {
-        console.log(this.state);
         return (
             <main className="schedule">
             <section className="content schedule-content">
                 <Switch>
-                    <Route path={`/schedule`} exact component={EventList} />
-                    <Route path={`/schedule/:eventId`} component={EventDetails} />
+                    <Route path={`/schedule`} exact render={props => (<EventList events={this.state.events} />)} />
+                    <Route path={`/schedule/:eventId`} render={({ match }) => (<EventDetails event={this.state.events[match.params.eventId]} />)} />
                 </Switch>
             </section>
         </main>

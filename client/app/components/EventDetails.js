@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const EventList = props => {
+const EventDetails = ({ event }) => {
+    console.log(event)
     return (
         <div className="event-details">
             <section className="event-details-header">
@@ -9,22 +10,22 @@ const EventList = props => {
                     <img src="../static/assets/images/event-cancel.png" alt="return to event list" />
                 </Link>
                 <div>
-                    <h2>Event Name</h2>
-                    <h4>8/14/2018 5:00PM</h4>
+                    <h2>{event.title}</h2>
+                    <h4>{event.date} {event.time}</h4>
                 </div>
             </section>
             <section className="event-details-content">
                 <div className="event-details-split">
-                    <img className="event-details-image" src="../static/assets/images/event.jpg" alt="event image" />
+                    <img className="event-details-image" src={event.imgPath} alt="event image" />
                     <div className="event-details-location">
-                        <h4>Location Name</h4>
-                        <button>View on Map</button>
+                        <h4>{event.location.title}</h4>
+                        <a href={event.mapLink} target="_blank"><button>View on Map</button></a>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu tristique metus, at maximus nisl. Aliquam in neque rhoncus, suscipit sem eget, sodales neque. Suspendisse sit amet ipsum leo. Phasellus a nisl viverra, molestie neque et, aliquam mauris. Nullam vulputate augue a massa accumsan blandit.</p>
+                <p>{event.description}</p>
             </section>
         </div>
     )
 }
 
-export default EventList;
+export default EventDetails;
