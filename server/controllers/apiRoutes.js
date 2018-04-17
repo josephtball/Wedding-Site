@@ -1,11 +1,11 @@
 var express = require('express');
 
-var eventList = require('../data/eventList');
+var events = require('../data/events');
 
 var router = express.Router();
 
 router.get('/events', function(req, res) {
-    res.json(eventList);
+    res.json(events);
 });
 
 module.exports = router;
