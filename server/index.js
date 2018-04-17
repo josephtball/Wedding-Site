@@ -23,6 +23,8 @@ app.use('/static', express.static(path.join(__dirname, '../public')));
 // routes
 var htmlRoutes = require('./controllers/htmlRoutes');
 app.use('/', htmlRoutes);
+var apiRoutes = require('./controllers/apiRoutes');
+app.use('/api', apiRoutes);
 
 // start server
 app.listen(port, function() { console.log('Server listening on PORT ' + port) });

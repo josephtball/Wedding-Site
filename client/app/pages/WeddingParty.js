@@ -13,6 +13,13 @@ const WeddingParty = props => {
                             <h3 className="last-name">LastName</h3>
                         </div>
                     </div>
+                    <div className="card">
+                        <img className="portrait" src="" alt="portrait" />
+                        <div className="label">
+                            <h3 className="first-name">FirstName</h3>
+                            <h3 className="last-name">LastName</h3>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
