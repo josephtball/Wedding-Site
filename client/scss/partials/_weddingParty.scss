@@ -1,0 +1,35 @@
+.weddingParty-content {
+    h2 {
+        color: $contentColor;
+        font-family: $contentFont;
+        font-size: 1.1em;
+        font-weight: 400;
+    }
+
+    .selected {
+        font-weight: 700;
+    }
+
+    .card {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 10em;
+        margin: 1em 0.5em;
+        display: inline-block;
+
+    }
+
+    .bridemaid-1 {
+        background-image: url(../images/wedding-party/BM-1.png);
+    }
+    .bridemaid-2 {
+        background-image: url(../images/wedding-party/BM-2.png);
+    }
+    .bridemaid-3 {
+        background-image: url(../images/wedding-party/BM-3.png);
+    }
+    .bridemaid-4 {
+        background-image: url(../images/wedding-party/BM-4.png);
+    }
+}
