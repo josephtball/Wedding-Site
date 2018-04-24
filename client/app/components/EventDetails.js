@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const EventDetails = ({ event }) => {
-    console.log(event)
     return (
         <div className="event-details">
             <section className="event-details-header">
