@@ -1,0 +1,87 @@
+.schedule {
+    background-color: $offWhite;
+}
+
+.event-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        padding: 1em 1.5em;
+        border-bottom: 1px solid #E0C09F;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+
+    a {
+        display: flex;
+        text-decoration: none;
+        color: $contentColor;
+
+        .event-list-heading {
+            flex: 1 0 auto;
+        }
+        .event-list-arrow {
+            flex-shrink: 0;
+        }
+    }
+
+    h3, h4 {
+        margin: 0;
+        text-align: left;
+    }
+
+    h4 {
+        font-size: 0.8em;
+    }
+}
+
+.event-details {
+    padding: 1em;
+
+    h4 {
+        margin: 0;
+    }
+
+    .event-details-header {
+        margin-bottom: 2em;
+        position: relative;
+
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        h2 {
+            color: $contentColor;
+            font-family: $contentFont;
+            text-transform: none;
+            margin-bottom: 0.3em;
+        }
+    }
+
+    .event-details-content {
+
+        h4 {
+            margin-bottom: 0.5em;
+        }
+        
+        .event-details-split {
+            display: flex;
+
+            .event-details-image {
+                flex: 1;
+                align-self: center;
+                max-width: 50%;
+            }
+
+            .event-details-location {
+                flex: 1;
+            }
+        }
+    }
+}

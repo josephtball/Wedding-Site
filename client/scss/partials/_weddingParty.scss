@@ -1,0 +1,94 @@
+.weddingParty-content {
+    h2 {
+        color: $contentColor;
+        font-family: $contentFont;
+        font-size: 1.1em;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .selected {
+        font-weight: 700;
+    }
+
+    .photo-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card {
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 12em;
+        width: 8em;
+        margin: 1em 0.6em;
+        display: block;
+
+    }
+
+    .label {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: $contentColor;
+        opacity: 0.8;
+        color: $white;
+        padding: 0.5em 0;
+
+        h3, h5 {
+            margin: 0;
+            font-weight: 400;
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .bridemaid-default {
+        background-image: url(../images/wedding-party/BM-default.jpg);
+    }
+    .bridemaid-1 {
+        background-image: url(../images/wedding-party/BM-1.png);
+    }
+    .bridemaid-2 {
+        background-image: url(../images/wedding-party/BM-2.png);
+    }
+    .bridemaid-3 {
+        background-image: url(../images/wedding-party/BM-3.png);
+    }
+    .bridemaid-4 {
+        background-image: url(../images/wedding-party/BM-4.png);
+    }
+    .bridemaid-5 {
+        background-image: url(../images/wedding-party/BM-5.png);
+    }
+    .bridemaid-6 {
+        background-image: url(../images/wedding-party/BM-6.png);
+    }
+
+    .groomsman-default {
+        background-image: url(../images/wedding-party/GM-default.jpg);
+    }
+    .groomsman-1 {
+        background-image: url(../images/wedding-party/GM-1.png);
+    }
+    .groomsman-2 {
+        background-image: url(../images/wedding-party/GM-2.png);
+    }
+    .groomsman-3 {
+        background-image: url(../images/wedding-party/GM-3.png);
+    }
+    .groomsman-4 {
+        background-image: url(../images/wedding-party/GM-4.png);
+    }
+    .groomsman-5 {
+        background-image: url(../images/wedding-party/GM-5.png);
+    }
+    .groomsman-6 {
+        background-image: url(../images/wedding-party/GM-6.png);
+    }
+}

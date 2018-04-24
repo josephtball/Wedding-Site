@@ -1,0 +1,41 @@
+.home {
+    background-color: $offWhite;
+}
+
+.home-hero {
+    background-image: url(../images/home-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 14.063em;
+}
+
+.home-hero-title {
+    padding-top: 8em;
+    font-family: $styledFont;
+    color: $contentColor;
+    text-align: center;
+
+    h1 {
+        margin-bottom: 0;
+        font-size: 2em;
+
+        @include mq($width: 22.6875em) {
+            font-size: 2.4em;
+        }
+    }
+
+    h3 {
+        margin-top: 0;
+        font-size: 1.5em;
+    }
+}
+
+.home-content {
+    padding: 3.5em 2.5em 2.5em;
+
+    .rsvp {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
