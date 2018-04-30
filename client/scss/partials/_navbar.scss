@@ -26,18 +26,44 @@ nav {
 	}
 }
 
-.hamburger-closed {
-	position: absolute;
-	top: -14px;
-	right: -9px;
+/* hamburger */
+.menu-toggle {
+	background-color: $contentColor;
+	padding: 2.4em 1.587em;
+	border-radius: 100%;
+	position: fixed;
+	top: -1em;
+	right: -0.7em;
 	z-index: 999;
+
+	.hamburger-top,
+	.hamburger-middle,
+	.hamburger-bottom {
+		content: '';
+		display: block;
+		background-color: $white;
+		height: 2px;
+		width: 2em;
+		transition: all ease-in-out 300ms;
+	}
+	.hamburger-top {
+		transform: translateY(-8px);
+	}
+	.hamburger-bottom {
+		transform: translateY(8px);
+	}
 }
 
-.hamburger-open {
-	position: absolute;
-	top: -14px;
-	right: -9px;
-	z-index: 999;
+.open {
+	.hamburger-top {
+		transform: translateY(2.5px) rotate(45deg);
+	}
+	.hamburger-middle {
+		opacity: 0;
+	}
+	.hamburger-bottom {
+		transform: translateY(-2.5px) rotate(-45deg);
+	}
 }
 
 .site-nav {
@@ -56,7 +82,7 @@ nav {
 		height: 29.7em;
 		opacity: 1;
 		clip-path: circle(0 at 100% 0);
-		transition: all ease-out 750ms;
+		transition: all ease-out 500ms;
 		width: 100%;
 		padding-bottom: 0;
 	}

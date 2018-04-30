@@ -7,8 +7,7 @@ export default class Navbar extends Component {
 
         this.state = {
             page: 'caitlin & david\'s wedding',
-            imageSrc: 'static/assets/images/hamburger.png',
-            navStatus: 'closed',
+            navStatus: '',
             navClass: 'home-'
         };
 
@@ -17,15 +16,13 @@ export default class Navbar extends Component {
     }
 
     handleNavClick() {
-        if (this.state.navStatus === 'closed') {
+        if (this.state.navStatus === '') {
             this.setState({
-                imageSrc: 'static/assets/images/cancel.png',
                 navStatus: 'open'
             });
         } else {
             this.setState({
-                imageSrc: 'static/assets/images/hamburger.png',
-                navStatus: 'closed'
+                navStatus: ''
             });
         }
         
@@ -51,7 +48,11 @@ export default class Navbar extends Component {
         return (
             <nav>
                 <h2 className={`${this.state.navClass}nav-header`}>{this.state.page}</h2>
-                <img onClick={this.handleNavClick} className={`hamburger-${this.state.navStatus}`} src={this.state.imageSrc} alt="navigation" />
+                <div onClick={this.handleNavClick} className={`menu-toggle ${this.state.navStatus}`}>
+                    <div className="hamburger-top"></div>
+                    <div className="hamburger-middle"></div>
+                    <div className="hamburger-bottom"></div>
+                </div>
                 <div className={`site-nav site-nav-${this.state.navStatus}`}>
                     <div className="links">
                         <NavLink onClick={this.handleLinkClick} className="nav-link" to="/" exact>home</NavLink><span className="nav-line"></span>
