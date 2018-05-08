@@ -1,23 +1,41 @@
 .home {
     background-color: $offWhite;
+    max-width: 50em;
 }
 
 .home-hero {
     background-image: url(../images/home-hero.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: bottom center;
     height: 14.063em;
+    position: relative;
+
+    @include mq($width: 30em) {
+        height: 20em;
+    }
+
+    @include mq($width: 40em) {
+        height: 28em;
+    }
 }
 
 .home-hero-title {
-    padding-top: 8em;
+    position: absolute;
+    bottom: 0.2em;
+    left: 0;
+    right: 0;
+    margin: auto;
     font-family: $styledFont;
     color: $contentColor;
     text-align: center;
 
+    @include mq($width: 40em) {
+        bottom: 1.5em;
+    }
+
     h1 {
-        margin-bottom: 0;
+        margin: 0;
         font-size: 2em;
 
         @include mq($width: 22.6875em) {
@@ -26,15 +44,18 @@
     }
 
     h3 {
-        margin-top: 0;
+        margin: 0;
         font-size: 1.5em;
     }
 }
 
 .home-content {
     padding: 3.5em 2.5em 2.5em;
+    max-width: 30em;
+    margin: auto;
 
     .rsvp {
+        margin-top: 1em;
         padding-left: 3em;
         padding-right: 3em;
     }
